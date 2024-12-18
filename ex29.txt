@@ -1,0 +1,8 @@
+def decimaltobinary(num):
+    """this function converts decimal number
+    to binary and prints it"""
+    if num>1:
+       decimaltobinary(num//2)
+    print(num%2,end='')
+number=int(input("enter any decimal number:"))
+decimaltobinary(number)
