@@ -1,0 +1,15 @@
+import sqlite3
+try:
+    sqlite_connection=sqlite3.connect('temp.db')
+    conn=sqlite3.connect(':memory:')
+    print("\nmemory database connected and created to sqlite.")
+    sqlite_select_query="select sqlite_version():"
+    conn.execute(sqlite-select_query)
+    print("\nsqlite database version is:",sqlite3.version)
+    conn.close()
+except sqlite3.Error as error:
+    print("\nError while connecting to sqlite",error)
+finally:
+    if(sqlite_connection):
+        sqlite_connection.close()
+        print("\nthe sqlite connection is closed")
