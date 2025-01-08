@@ -1,0 +1,3 @@
+c=input("enter temperature in centigrade:")
+f=(9*(int(c))/5)+32
+print("themperature in fahrenheit is:",f)
